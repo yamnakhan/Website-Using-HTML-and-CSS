@@ -23,6 +23,8 @@
             background-position: center;
 
         }
+    
+        
         nav{
             display: flex;
             padding: 2% 4%;
@@ -35,7 +37,13 @@
         .nav-links{
             flex: 1;
             text-align: right;
-        }  
+        } 
+        img{
+            transition: transform .3s ease;
+        } 
+        img:hover{
+            transform: scale(1.2);
+        }
         .nav-links ul li {
             list-style: none;
             display: inline-block;
@@ -128,18 +136,42 @@
         .nav-links ul{
             padding: 30px;
         }
+        .row{
+            flex-direction: column; 
+        }     
+        #para{
+            font-size:15px ;
+        }
+        .hor{
+            flex-direction: column;
+        }
+        .hor .ver{
+            margin :20px auto;
+        }
+        .ver img{
+            max-width: 90%;
+        }
+        .footer p{
+           width:100%;
+           flex-direction: column;
+           font-size: 10px;
+           padding: 20px 20px;
+           flex-direction: column;
+          
 
         }
+        }
 
-    .desc {
+    .home {
         width: 80%;
         margin: auto;
         text-align: center;
         padding-top: 60px;
     }
-    h1{
+    .home h1{
         font-size: 50px;
         font-weight: 500;
+        color: rgb(46, 40, 40);
     }
     p{
         color: #4b0708;
@@ -160,7 +192,7 @@
         margin-bottom: 5%;
         padding: 20px 12px;
         box-sizing: border-box;
-        transition: 1s;
+        transition: 0.5s;
     }
     h2{
         text-align: center;
@@ -168,11 +200,112 @@
         margin: 10px 0;
     }
     .h-col:hover{
-        box-shadow: 0 0 20px 0px rgba(172, 8, 8, 0.2);
+        box-shadow: 20px 0 20px 0 rgba(17, 14, 14, 0.589);
+    }
+    .about{
+            height: 80vh;
+            width:100%;
+            background-image:url(assets/napolitana-sauce-11-1200.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex ;
+            align-items: center;
+            justify-content: center;
+
+    }
+    a{
+        text-decoration: none;
+    }
+    .button{
+        padding: 8px 15px;
+        background-color: rgba(7, 7, 114, 0.8);
+        border-radius: 30px;
+        color: antiquewhite;   
+        border-left: 30px;    
+    }
+    .about-content h3{
+        font-size:10vmin ; 
+        padding-bottom: 10px;
+        padding-left: 90px;
+      }
+    #button-div{
+        box-sizing: border-box;
+        padding-left: 38%;
+        padding-bottom: 20px;
+
+    }  
+    #para{
+        box-sizing: border-box;
+        text-align: center;
+        color: rgb(237, 242, 247);
+    }
+    .line{
+        width: 150px ;
+        height: 4px ;
+        background: #4b0708;
+        margin:10px auto;
+        border-radius: 5px;
+    }
+    #sec{
+        width: 80%;
+        margin: 80px auto;
+    }
+    .title{
+        text-align: center;
+        font-size: 4vmin;
+        color: rgba(54, 49, 49, 0.897);
+    }
+    .hor{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        
+    }
+    .hor .ver {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #sec .hor {
+        margin-top: 50px;
+    }
+    h4{
+        font-size: 3vmin;
+        color: #775151;
+        margin: 20px auto;
+    }
+    #sec p {
+        color: #4b0708;
+        padding: 0px 40px;
     }
 
+    #sec .button {
+        margin-top: 30px;
+    }
+    #sec img{
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 250px;
+    }
+    #sec img:hover{
+        box-shadow: 0 0 8px 3px rgba(165, 37, 47, 0.5);
+    }
+    .footer{
+        width: 100%;
+        min-height: 100px;
+        padding: 20px 80px;
+        margin: 0;
+        background: #6b6666;
+        text-align: center;
+    }
+    .footer p {
+        color: #fff;
+        margin: 20px auto;
 
-
+    }
 
 
     </style>
@@ -186,8 +319,8 @@
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li>
-                    <li><a href="">SERVICE</a></li>
-                    <li><a href="">PORTFOLIO</a></li>
+                    <li><a href="">DISHES</a></li>
+                    <li><a href="">CONTACT</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="OpenMenu()" ></i>
@@ -199,7 +332,7 @@
         </div> 
       </section>
 
-      <section class="desc">
+      <section class="home">
     <div>
         <h1> Singnature Dishes </h1>
         
@@ -246,6 +379,53 @@
                 </div>  
                
             </div>
+
+
+      </section>
+
+
+      <section class="about">
+        <div class="about-content">
+            <h3>About The Resturant</h3>
+            <div id="button-div"><a href="" class="button">Learn more</a></div>
+            <p id="para">
+                Click button to view services and details about the Resturant.<br>Asthetic interior ,good services,<br> releax environment and much more!!!
+            </p>
+
+
+        </div>
+      </section>
+
+
+      <section id="sec">
+        <div class="title">
+            <h1>DISHES</h1>
+            <div class="line"></div>
+        </div>
+        <div class="hor">
+            <div class="ver">
+                <img src="assets/OIP (1).jpeg" alt="Chinese Food">
+                <h4>Chinese Food</h4>
+                <p>Dim Sums, Hot and Sour Soup, Quick Noodles, Szechwan Chilli Chicken, Spring Roll, Honey Chilli Potato </p>
+                <a href="" class="button">Learn more</a>
+            </div>
+
+            <div class="ver">
+                <img src="assets/OIP.jpeg" alt="Pakistani Food">
+                <h4>Chinese Food</h4>
+                <p>Dum Biryani, Chicken Korma, Kabab, Malai Boti Roll, Mutton Nihari, Lassi </p>
+                <a href="" class="button">Learn more</a>
+            </div>
+
+
+
+        </div>
+      </section>
+
+
+      <section class="footer">
+            <p>DHA Karachi ,Ny 10160, New York, USA | Phone : 900-457-876 | Email : dishes@45gmail.com</p>
+            <p>Copyright &copy; 2024 Outdoor Adventure</p>
 
 
       </section>
